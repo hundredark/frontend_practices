@@ -1,0 +1,102 @@
+body {
+    text-align:center
+}
+
+#minesweeper {
+    margin: 0 auto;
+}
+
+#id-div-mime {
+    display: inline-block;
+}
+
+#id-div-mime-copy {
+    display: inline-block;
+    position: relative;
+    left: 15px;
+}
+
+.hide {
+    display: none;
+}
+
+.row {
+    border-color: red;
+
+}
+
+.cell {
+    float: left;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 0;
+    text-align: center;
+
+    border-top: solid 5px #FFFFFF;
+    border-left: solid 5px #FFFFFF;
+    border-right: solid 5px #808080;
+    border-bottom: solid 5px #808080;
+    background: #BDBDBD;
+}
+
+.opened {
+    font-size: 20px;
+    font-weight: 1000;
+    border-top: solid 5px #808080;
+    border-left: solid 5px #808080;
+    border-right: solid 5px #C0C0C0;
+    border-bottom: solid 5px #C0C0C0;
+    background: #C0C0C0;
+}
+
+.right_click {
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+.clearfix::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.control-div {
+    display: inline-block;
+}
+
+.control {
+    width: 70px;
+    height: 25px;
+}
+
+text-center {
+    text-align: center;
+}
+
+input {
+    width: 20px;
+    height: 19px;
+}
+
+.move-down {
+    position: relative;
+    top: 1px;
+}
+
+.number-0 {
+    font-size: 0;
+}
+.number-1 {
+    color: blue;
+}
+.number-2 {
+    color: green;
+}
+.number-3 {
+    color: red;
+}
+.number-4 {
+    color: black
+}
