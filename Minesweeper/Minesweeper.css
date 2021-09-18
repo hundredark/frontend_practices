@@ -1,3 +1,19 @@
+.number-0 {
+    font-size: 0;
+}
+.number-1 {
+    color: blue;
+}
+.number-2 {
+    color: green;
+}
+.number-3 {
+    color: red;
+}
+.number-4 {
+    color: black
+}
+
 body {
     text-align:center
 }
@@ -54,6 +70,7 @@ body {
 .right_click {
     font-size: 20px;
     font-weight: 1000;
+    color: black;
 }
 
 .clearfix::after {
@@ -85,18 +102,4 @@ input {
     top: 1px;
 }
 
-.number-0 {
-    font-size: 0;
-}
-.number-1 {
-    color: blue;
-}
-.number-2 {
-    color: green;
-}
-.number-3 {
-    color: red;
-}
-.number-4 {
-    color: black
-}
+

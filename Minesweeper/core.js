@@ -15,14 +15,10 @@ const readCfg = function() {
 // ==============================================================
 // 矩阵生成
 const getZeroMap = function(h, w) {
-    let line = []
-    for (let j = 0; j < w; j++) {
-        line.push(0)
-    }
-
     let zero_map = []
     for (let i = 0; i < h; i++) {
-        zero_map.push(line.slice(0))
+        let line = new Array(w).fill(0)
+        zero_map.push(line)
     }
     return zero_map
 }
@@ -278,7 +274,13 @@ const setColor = function() {
 const templateCell = function(line, x) {
     let row = '<div class="row clearfix">'
     for (let i = 0; i < line.length; i++) {
-        let str = `<div class="cell" data-number="${line[i]}" data-x="${x}" data-y="${i}">${line[i]}</div>`
+        let c = ""
+        if (line[i] === 9) {
+            c = "💣"
+        } else {
+            c = String(line[i])
+        }
+        let str = `<div class="cell" data-number="${line[i]}" data-x="${x}" data-y="${i}">${c}</div>`
         row += str
     }
     return row
@@ -332,7 +334,9 @@ const bindEventDelegate = function() {
                 removeAllCells()
                 renderSquare(square, "#id-div-mime")
 
-                // copyMap(square)
+                if (localStorage.debug === 'true') {
+                    copyMap(square)
+                }
                 setColor()
                 log("generate hint")
             }
@@ -359,14 +363,17 @@ const bindEventDelegate = function() {
                     r = "?"
                 } else if (r === "?") {
                     self.dataset.right = "undefined"
-                    r = "undefined"
+                    r = self.dataset.number
                 } else {
                     self.dataset.right = "🚩"
                     r = "🚩"
                 }
 
+                if (r === "9") {
+                    r = "💣"
+                }
+                self.innerHTML = r
                 if (["🚩", "?"].includes(r)) {
-                    self.innerHTML = r
                     if (!self.classList.contains("right_click")) {
                         self.classList.add("right_click")
                     }
