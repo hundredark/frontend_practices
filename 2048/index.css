@@ -1,0 +1,141 @@
+body {
+    text-align: center;
+}
+
+#game-div {
+    background-color: #FAF8EF;
+    width: 517px;
+}
+
+.head {
+    height: 90px;
+    width: 517px;
+    position: relative;
+}
+
+#title {
+    float: left;
+    color: #776e65;
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.scores {
+    height: 103px;
+    position: relative;
+    margin-bottom: 23px;
+}
+
+.score {
+    float: right;
+    display: inline-block;
+    height: 60px;
+    width: 110px;
+    background-color: #BBADA0;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-top: 23px;
+}
+
+.vertical-center {
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
+}
+
+.score-title {
+    line-height: 25px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #eee4da;
+}
+
+.score-value {
+    line-height: 30px;
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+}
+
+.add_score {
+    position: relative;
+    top: -50%;
+    transition: top 0.5s, opacity 0.5s;
+    color: black;
+}
+
+.up {
+    top: -200%;
+    opacity: 0;
+}
+
+#keyboard {
+    display: inline-block;
+    margin: auto 0;
+    height: 40px;
+    font-size: 50px;
+    font-weight: 1000;
+    line-height: 40px;
+}
+
+#refresh {
+    float: right;
+    height: 40px;
+    width: 110px;
+    background-color: #8f7a66;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 3px;
+    border-style: none;
+}
+
+#grid {
+    background-color: #BBADA0;
+    border-radius: 6px;
+    height: 485px;
+    width: 487px;
+    position: relative;
+    padding: 15px;
+    margin-top: 23px;
+}
+
+.row {
+    margin-bottom: 15px;
+}
+
+.row:last-child {
+    margin-bottom: 0;
+}
+
+.cell {
+    float: left;
+    display: inline-block;
+    height: 110px;
+    width: 110px;
+    line-height: 110px;
+
+    border-radius: 6px;
+    margin-right: 15px;
+}
+
+.cell:last-child {
+    margin-right: 0;
+}
+
+.empty {
+    font-size: 0;
+    background-color: #CBC1B4;
+}
+
+.number {
+    color: #776e65;
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.clearfix::after {
+    display: block;
+    content: '';
+    clear: both;
+}

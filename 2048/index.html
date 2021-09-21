@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2048</title>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+    <div id="game-div">
+        <div>
+            <div class="head">
+                <div class="scores clearfix">
+                    <div id="title">2048</div>
+                    <div class="score" >
+                        <div class="score-title">BEST</div>
+                        <div class="score-value" id="best_score"></div>
+                    </div>
+                    <div class="score">
+                        <div class="score-title">SCORE</div>
+                        <div class="score-value" id="current_score">0</div>
+                        <div class="score-value add_score"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div id="keyboard">1</div>
+                <button id="refresh">New Game</button>
+            </div>
+        </div>
+        <div id="grid"></div>
+        <div id="history"></div>
+        <script src="utils.js"></script>
+        <script src="core.js"></script>
+        <script src="app.js"></script>
+    </div>
+</body>
+</html>
