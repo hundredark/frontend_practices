@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="center-div">
+        <div class="header">回车键：开始/暂停，r 键：重新开始</div>
+        <canvas id="game-canvas" width="720" height="480">
+            你的浏览器不支持 canvas，请升级你的浏览器。
+        </canvas>
+        <div id="input"></div>
+
+        <div class="modal-container hide">
+            <div class="modal-mask"></div>
+            <div class="modal-alert vertical-center">
+                <div class="pause-container hide">
+                    <div class="modal-header">暂停中</div>
+                    <div class="button-container"><button class="ok-button">继续</button></div>
+                </div>
+
+                <div class="end-container hide">
+                    <div class="modal-header">游戏结束</div>
+                    <div class="button-container"><button class="ok-button">重新开始</button></div>
+                </div>
+
+                <div class="restart-container hide">
+                    <div class="modal-header">重新开始？</div>
+                    <div class="button-container">
+                        <button class="cancel-button">取消</button>
+                        <button class="ok-button">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="utils.js"></script>
+    <script src="classes.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
