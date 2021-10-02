@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <link href="slide_img.css" rel="stylesheet">
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-imgs" data-imgs="4" data-active="0">
+            <img id="id-img-0" class="slide-img slide-img-active" src="slideimages/1.jpg" alt="towers">
+            <img id="id-img-1" class="slide-img" src="slideimages/2.jpg" alt="stables">
+            <img id="id-img-2" class="slide-img" src="slideimages/3.jpg" alt="Shrines">
+            <img id="id-img-3" class="slide-img" src="slideimages/4.jpg" alt="Villages">
+        </div>
+        <div class="slide-img-buttons">
+            <button class="slide-img-button vertical_center" id="last-img-button" data-offset="-1">&lt;</button>
+            <button class="slide-img-button vertical_center" id="next-img-button" data-offset="1">&gt;</button>
+        </div>
+        <div class="slide-img-dots horizontal_center">
+            <div class="slide-img-dot slide-dot-active" id="slide-img-dot-0"></div>
+            <div class="slide-img-dot" id="slide-img-dot-1"></div>
+            <div class="slide-img-dot" id="slide-img-dot-2"></div>
+            <div class="slide-img-dot" id="slide-img-dot-3"></div>
+        </div>
+    </div>
+    <script src="utils.js"></script>
+    <script src="slide_img.js"></script>
+</body>
+</html>
