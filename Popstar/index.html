@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="head">
+            <div class="score-div">分数：<span id="score"></span></div>
+            <div class="level-div"></div>
+        </div>
+        <canvas id="popstar-canvas"></canvas>
+
+        <div class="modal-container hide">
+            <div class="modal-mask"></div>
+            <div class="modal-alert vertical-center">
+                <div class="end-container">
+                    <div class="modal-header">游戏结束</div>
+                    <div class="button-container"><button class="ok-button">下一关</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="utils.js"></script>
+    <script src="class.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
