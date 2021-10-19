@@ -256,7 +256,7 @@ const bindEventDelegate = function() {
                 if (localStorage.debug === 'true') {
                     copyMap(square)
                 }
-                setColor()
+                // setColor()
                 log("generate hint")
             }
 
@@ -338,15 +338,18 @@ const vjkl = function(cell, square) {
     log("click event", x, y, number)
 
     if (number === "9") {
+        cell.classList.add("boom")
         let cells = es(`[data-number="9"]`)
         for (let cell of cells) {
-            cell.classList.add("opened")
+            if (!['?', '🚩'].includes(cell.dataset.right)) {
+                cell.classList.add("opened")
+            }
         }
         return -1
     } else if (number === "0"){
         vjklAround(square, x, y)
     } else {
-        cell.classList.add("opened")
+        open(cell, number)
     }
 }
 
@@ -355,7 +358,7 @@ const vjklAround = function(square, x, y) {
     let selector = `[data-x="${x}"][data-y="${y}"]`
     let ele = e(selector)
     if (!ele.classList.contains("opened")) {
-        ele.classList.add("opened")
+        open(ele, 0)
     }
 
     for (let i = x - 1; i <= x + 1; i++) {
@@ -366,6 +369,11 @@ const vjklAround = function(square, x, y) {
             }
         }
     }
+}
+
+const open = function(ele, number) {
+    ele.classList.add("opened")
+    ele.classList.add(`number-${number}`)
 }
 
 const vjkl1 = function(square, x, y) {
@@ -382,7 +390,7 @@ const vjkl1 = function(square, x, y) {
             } else if (number === "0") {
                 vjklAround(square, x, y)
             } else {
-                ele.classList.add("opened")
+                open(ele, number)
             }
         }
     }
